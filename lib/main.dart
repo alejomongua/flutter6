@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'User preferences',
-      initialRoute: HomePage.routeName,
+      initialRoute: prefs.ultimaPagina,
       routes: {
         HomePage.routeName: (_) => HomePage(),
         SettingsPage.routeName: (_) => SettingsPage(),

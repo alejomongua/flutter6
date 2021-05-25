@@ -38,4 +38,12 @@ class Preferences {
   set modoOscuro(newModoOscuro) {
     this._prefs!.setBool('modoOscuro', newModoOscuro);
   }
+
+  get ultimaPagina {
+    return this._prefs!.getString('ultimaPagina') ?? 'home';
+  }
+
+  set ultimaPagina(newUltimaPagina) {
+    this._prefs!.setString('ultimaPagina', newUltimaPagina);
+  }
 }

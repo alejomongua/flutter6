@@ -23,6 +23,7 @@ class _SettingsPageState extends State<SettingsPage> {
     _genero = prefs.genero;
     _nombre = prefs.nombre;
     _modoOscuro = prefs.modoOscuro;
+    prefs.ultimaPagina = SettingsPage.routeName;
     setState(() {});
   }
 

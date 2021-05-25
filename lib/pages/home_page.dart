@@ -7,20 +7,24 @@ class HomePage extends StatelessWidget {
   final prefs = Preferences();
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: Text('Preferencias del usuario'),
-        ),
-        drawer: DrawerMenu(routeName: routeName),
-        body: Column(
-          children: <Widget>[
-            Text('Color secundario: ${prefs.modoOscuro ? 'Si' : 'No'}'),
-            Divider(),
-            Text('Genero: ${prefs.genero}'),
-            Divider(),
-            Text('Nombre usuario: ${prefs.nombre}'),
-            Divider(),
-          ],
-        ),
-      );
+  Widget build(BuildContext context) {
+    prefs.ultimaPagina = HomePage.routeName;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Preferencias del usuario'),
+      ),
+      drawer: DrawerMenu(routeName: routeName),
+      body: Column(
+        children: <Widget>[
+          Text('Color secundario: ${prefs.modoOscuro ? 'Si' : 'No'}'),
+          Divider(),
+          Text('Genero: ${prefs.genero}'),
+          Divider(),
+          Text('Nombre usuario: ${prefs.nombre}'),
+          Divider(),
+        ],
+      ),
+    );
+  }
 }
